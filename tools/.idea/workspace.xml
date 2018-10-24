@@ -14,8 +14,8 @@
       <file leaf-file-name="gitblog.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gitblog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-426">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="204">
+              <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -23,8 +23,17 @@
       <file leaf-file-name="argparse.pyi" pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/argparse.pyi">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
+            <state relative-caret-position="178">
               <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="typing.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Program Files/python35/Lib/typing.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="565" column="6" selection-start-line="565" selection-start-column="6" selection-end-line="565" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -41,8 +50,8 @@
       <file leaf-file-name="argparse.py" pinned="false" current-in-tab="false">
         <entry file="file://D:/Program Files/python35/Lib/argparse.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="1307" selection-start-line="1307" selection-end-line="1307" />
+            <state relative-caret-position="178">
+              <caret line="733" column="6" selection-start-line="733" selection-start-column="6" selection-end-line="733" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -160,13 +169,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://D:/Program Files/python35/Lib/argparse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="1307" selection-start-line="1307" selection-end-line="1307" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-552244572/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-623">
@@ -174,17 +176,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/Program Files/python35/Lib/typing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="565" column="6" selection-start-line="565" selection-start-column="6" selection-end-line="565" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/python35/Lib/argparse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="733" column="6" selection-start-line="733" selection-start-column="6" selection-end-line="733" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/argparse.pyi">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
+        <state relative-caret-position="178">
           <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gitblog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-426">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="204">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
         </state>
       </provider>
     </entry>

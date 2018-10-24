@@ -19,7 +19,8 @@ def build_summary(path):
 def main():
     argparser = argparse.ArgumentParser()
     argparser.add_argument("command",
-                           choices=("create", "summary"))
+                           choices=("create", "summary"),
+                           nargs="?")
     argparser.add_argument("-c", "--category",
                            help="specify a category or create a new category")
     argparser.add_argument("-a", "--article",
@@ -27,8 +28,8 @@ def main():
     argparser.add_argument("-d", "--directory",
                            help="specify a directory to save summary")
     argparser.add_argument("-v", "--version",
-                           help="print version",
-                           action="store_true")
+                           action="version",
+                           version="v1.0")
     args = argparser.parse_args()
     if args.command:
         if args.command == "create":
