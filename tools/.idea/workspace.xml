@@ -14,8 +14,56 @@
       <file leaf-file-name="gitblog.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gitblog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
+            <state relative-caret-position="900">
+              <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="datetime.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Program Files/python35/Lib/datetime.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="1309" column="6" selection-start-line="1309" selection-start-column="6" selection-end-line="1309" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="genericpath.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Program Files/python35/Lib/genericpath.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nt.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-552244572/nt.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="310" column="4" selection-start-line="310" selection-start-column="4" selection-end-line="310" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ntpath.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Program Files/python35/Lib/ntpath.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="os.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/Program Files/python35/Lib/os.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="295" column="4" selection-start-line="295" selection-start-column="4" selection-end-line="295" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -32,8 +80,8 @@
       <file leaf-file-name="typing.py" pinned="false" current-in-tab="false">
         <entry file="file://D:/Program Files/python35/Lib/typing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16770">
-              <caret line="565" column="6" selection-start-line="565" selection-start-column="6" selection-end-line="565" selection-end-column="6" />
+            <state relative-caret-position="773">
+              <caret line="1565" column="8" selection-start-line="1565" selection-start-column="8" selection-end-line="1565" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -41,8 +89,8 @@
       <file leaf-file-name="builtins.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-552244572/builtins.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38850">
-              <caret line="1295" column="6" selection-start-line="1295" selection-start-column="6" selection-end-line="1295" selection-end-column="6" />
+            <state relative-caret-position="30">
+              <caret line="339" column="4" selection-start-line="339" selection-start-column="4" selection-end-line="339" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -65,7 +113,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="width" value="960" />
     <option name="height" value="1032" />
   </component>
@@ -142,7 +190,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
+    <frame x="0" y="0" width="960" height="1032" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.34394905" />
@@ -172,6 +220,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1770">
           <caret line="59" column="26" lean-forward="true" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -238,20 +289,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-552244572/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38850">
-          <caret line="1295" column="6" selection-start-line="1295" selection-start-column="6" selection-end-line="1295" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Program Files/python35/Lib/typing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16770">
-          <caret line="565" column="6" selection-start-line="565" selection-start-column="6" selection-end-line="565" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Program Files/python35/Lib/argparse.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32100">
@@ -266,10 +303,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/Program Files/python35/Lib/ntpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/python35/Lib/os.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="295" column="4" selection-start-line="295" selection-start-column="4" selection-end-line="295" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/python35/Lib/genericpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-552244572/nt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="310" column="4" selection-start-line="310" selection-start-column="4" selection-end-line="310" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-552244572/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="339" column="4" selection-start-line="339" selection-start-column="4" selection-end-line="339" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/python35/Lib/typing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="773">
+          <caret line="1565" column="8" selection-start-line="1565" selection-start-column="8" selection-end-line="1565" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/python35/Lib/datetime.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="1309" column="6" selection-start-line="1309" selection-start-column="6" selection-end-line="1309" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gitblog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
+        <state relative-caret-position="900">
+          <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
