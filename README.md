@@ -1,30 +1,32 @@
-# blog
+# logic wei的博客
 
-基于github的博客。此仓库用作我的博客原始数据库，为了便于查阅和编辑，同时编写了相应的工具作为辅助
+基于github的博客。此仓库用作我博客的原始数据库，为了便于查阅和编辑，同时编写了相应的工具作为辅助
 
-# 目录
+## 目录
 
-[点我跳转到目录](./SUMMARY.md)
+- [分类列表](./SUMMARY-CATEGORY.md)
+- [时间排序](./SUMMARY-DATE.md)
 
-# gitblog.py
+
+## gitblog.py
 
 博客辅助工具，用于：
 
 - 规范目录结构
 - 根据目录结构自动生成目录文件 
 
-## 用法
+### 用法
 
 ```bash
-gitblog.py create -c Android # 新建Android分类
-gitblog.py create -a helloworld -c Android # Android分类下新建文章,名为helloworld
-gitblog.py create -a helloworld2 # 新建文章helloworld2,无分类
-gitblog.py summary ./ # 在`./`目录生成博客目录文件
+python tools/gitblog.py create -c Android # 新建Android分类
+python tools/gitblog.py create -a helloworld -c Android # Android分类下新建文章,名为helloworld
+python tools/gitblog.py create -a helloworld2 # 新建文章helloworld2,无分类
+python tools/gitblog.py summary  # 在根目录生成博客目录文件
 ```
 
-# 概念
+## 概念
 
-## 根目录结构
+### 根目录结构
 先看看根目录
 ```bash
 .
@@ -41,7 +43,7 @@ gitblog.py summary ./ # 在`./`目录生成博客目录文件
 └── SUMMARY.md # 博客目录
 ```
 
-## 文章（article）
+### 文章（article）
 
 `文章`定义为包含`main.md`的文件夹，为了保持`文章`的独立性，资源文件通通放入这个文件夹内，`文章`可以放在`articles`中，也可以放在`分类`下
 ```bash
@@ -51,7 +53,7 @@ gitblog.py summary ./ # 在`./`目录生成博客目录文件
 }
 ```
 
-## 分类(category)
+### 分类(category)
 
 `分类`定义为一个普通文件夹（不包含main.md的文件夹），`文章`可以放入到`分类`中，`分类`不可以嵌套，`分类`只能放在`articles`下
 ```bash

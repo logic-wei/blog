@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import argparse
 import os
 import sys
@@ -14,6 +15,57 @@ def err(msg):
 
 def info(msg):
     print("info:"+msg, file=sys.stdout)
+
+
+def is_article(path):
+    path_main = os.path.join(path, "main.md")
+    return os.path.exists(path_main) and os.path.isfile(path_main)
+
+
+def build_summary_category(path):
+    categorys_name = []
+    articles_name = []
+    # classify all files in articles
+    for filename in os.listdir(path_articles):
+        if is_article(os.path.join(path_articles, filename)):
+            articles_name.append(filename)
+        else:
+            categorys_name.append(filename)
+    with open(path, mode="a") as summary_file:
+        summary_file.writelines("# CATEGORY\n\n")
+        # handle every category
+        for category_name in categorys_name:
+            category_path = os.path.join(path_articles, category_name)
+            subarticles_name = os.listdir(category_path)
+            summary_file.writelines("## %s\n\n" % category_name)
+            # handle every sub article
+            for subarticle_name in subarticles_name:
+                subarticle_path = os.path.join(category_path, subarticle_name)
+                summary_file.writelines("- [%s](articles/%s/%s/main.md)\n" % (subarticle_name, category_name, subarticle_name))
+        # handle every article without category
+        summary_file.writelines("\n## undefined\n\n")
+        for article_name in articles_name:
+            summary_file.writelines("- [%s](articles/%s/main.md)\n" % (article_name, article_name))
+        info(""+path+" has been created!")
+
+
+def build_summary_date(path):
+    pass
+
+
+def build_summary(path):
+    if path is None:
+        path = path_root
+    # list by category
+    path_summary_category = os.path.join(path, "SUMMARY-CATEGORY.md")
+    # list by date
+    path_summary_date = os.path.join(path, "SUMMARY-DATE.md")
+    # create summary file
+    # open(path_summary_category, mode="a").close()
+    # open(path_summary_date, mode="a").close()
+    # modify summary file
+    build_summary_category(path_summary_category)
+    build_summary_date(path_summary_date)
 
 
 def check_create_category(name):
@@ -47,10 +99,6 @@ def create_article(name, category=None):
     info("article %s has been created!" % name)
     info("path:%s" % path_article)
     info("date:%s" % datetime.date.today())
-
-
-def build_summary(path):
-    info("build_summary", path)
 
 
 def on_sub_create(args):

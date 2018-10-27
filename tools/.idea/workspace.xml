@@ -14,8 +14,8 @@
       <file leaf-file-name="gitblog.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gitblog.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
+            <state relative-caret-position="450">
+              <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -35,8 +35,8 @@
       <file leaf-file-name="genericpath.py" pinned="false" current-in-tab="false">
         <entry file="file://D:/Program Files/python35/Lib/genericpath.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+            <state relative-caret-position="277">
+              <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -44,8 +44,8 @@
       <file leaf-file-name="nt.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-552244572/nt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="310" column="4" selection-start-line="310" selection-start-column="4" selection-end-line="310" selection-end-column="4" />
+            <state relative-caret-position="1237">
+              <caret line="280" column="33" selection-start-line="280" selection-start-column="33" selection-end-line="280" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -62,7 +62,7 @@
       <file leaf-file-name="os.py" pinned="false" current-in-tab="false">
         <entry file="file://D:/Program Files/python35/Lib/os.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
+            <state relative-caret-position="-1073">
               <caret line="295" column="4" selection-start-line="295" selection-start-column="4" selection-end-line="295" selection-end-column="4" />
             </state>
           </provider>
@@ -113,7 +113,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="width" value="960" />
     <option name="height" value="1032" />
   </component>
@@ -190,7 +190,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="960" height="1032" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.34394905" />
@@ -310,27 +310,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Program Files/python35/Lib/os.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="295" column="4" selection-start-line="295" selection-start-column="4" selection-end-line="295" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Program Files/python35/Lib/genericpath.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-552244572/nt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="310" column="4" selection-start-line="310" selection-start-column="4" selection-end-line="310" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-552244572/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -352,10 +331,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/Program Files/python35/Lib/genericpath.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.1/system/python_stubs/-552244572/nt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1237">
+          <caret line="280" column="33" selection-start-line="280" selection-start-column="33" selection-end-line="280" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/python35/Lib/os.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1073">
+          <caret line="295" column="4" selection-start-line="295" selection-start-column="4" selection-end-line="295" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gitblog.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="87" column="9" selection-start-line="87" selection-start-column="9" selection-end-line="87" selection-end-column="9" />
+        <state relative-caret-position="450">
+          <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
