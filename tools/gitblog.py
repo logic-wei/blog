@@ -31,7 +31,7 @@ def build_summary_category(path):
             articles_name.append(filename)
         else:
             categorys_name.append(filename)
-    with open(path, mode="a") as summary_file:
+    with open(path, mode="w") as summary_file:
         summary_file.writelines("# CATEGORY\n\n")
         # handle every category
         for category_name in categorys_name:
