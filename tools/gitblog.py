@@ -37,7 +37,7 @@ def main():
     # top level parser
     mainparser.add_argument("-v", "--version",
                             action="version",
-                            version="v1.0")
+                            version="none")
     mainparser.set_defaults(func=on_main)
     # sub parser for create
     subparser_create = subparsers.add_parser("create",
