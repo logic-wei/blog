@@ -31,19 +31,25 @@ def build_summary_category(path):
             articles_name.append(filename)
         else:
             categorys_name.append(filename)
+    # descending order
+    categorys_name.sort()
+    articles_name.sort()
     with open(path, mode="w") as summary_file:
         summary_file.writelines("# CATEGORY\n\n")
         # handle every category
         for category_name in categorys_name:
             category_path = os.path.join(path_articles, category_name)
             subarticles_name = os.listdir(category_path)
+            # descending order
+            subarticles_name.sort()
             summary_file.writelines("## %s\n\n" % category_name)
             # handle every sub article
             for subarticle_name in subarticles_name:
                 subarticle_path = os.path.join(category_path, subarticle_name)
                 summary_file.writelines("- [%s](articles/%s/%s/main.md)\n" % (subarticle_name, category_name, subarticle_name))
+            summary_file.writelines("\n")
         # handle every article without category
-        summary_file.writelines("\n## undefined\n\n")
+        summary_file.writelines("## undefined\n\n")
         for article_name in articles_name:
             summary_file.writelines("- [%s](articles/%s/main.md)\n" % (article_name, article_name))
         info(""+path+" has been created!")
@@ -60,9 +66,6 @@ def build_summary(path):
     path_summary_category = os.path.join(path, "SUMMARY-CATEGORY.md")
     # list by date
     path_summary_date = os.path.join(path, "SUMMARY-DATE.md")
-    # create summary file
-    # open(path_summary_category, mode="a").close()
-    # open(path_summary_date, mode="a").close()
     # modify summary file
     build_summary_category(path_summary_category)
     build_summary_date(path_summary_date)
