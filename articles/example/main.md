@@ -2,6 +2,7 @@ example
 ---
 
 > it's just a example to show you how to start a new article.
+> data:
 
 # title1
 

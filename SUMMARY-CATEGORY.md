@@ -14,6 +14,11 @@
 ## cata3
 
 
+## test
+
+- [test](articles/test/test/main.md)
+- [test2](articles/test/test2/main.md)
+
 ## 中文分类
 
 - [中文标题](articles/中文分类/中文标题/main.md)

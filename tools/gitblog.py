@@ -23,32 +23,73 @@ def is_article(path):
     return os.path.exists(path_main) and os.path.isfile(path_main)
 
 
-pattern_date = re.compile(r"^\s*date:(\d+-\d+-\d+)\s*$")
+# information table follows the markdown table:
+# markdown table:                   # description:
+# information | details             # head
+# ------------|-----------          # divide
+# date        | 2018-10-27          # date
+
 pattern_headline = re.compile(r"^#.*")
+pattern_info_head = re.compile(r"^\s*information\s*\|\s*details\s*$")
+pattern_info_divide = re.compile(r"^\s*-*\s*\|\s*-*\s*$")
+pattern_info_date = re.compile(r"^\s*date\s*\|\s*(\d*-\d*-\d*)\s*$")
+pattern_info_author = re.compile(r"^\s*author\s*\|\s*(.*)\s*$")
+patterns_info_supported = {
+    "date": pattern_info_date,
+    "author": pattern_info_author
+}
 
 
-def get_article_date(path):
+def get_article_info(path):
     """
-    get article's date
+    get article's info
     :param path: article's name with path
-    :return: str or None
+    :return: return None or all of the supported info's value named info_value
     """
-    with open(os.path.join(path, "main.md"), mode="r") as main_file:
-        line = main_file.readline()
-        headline_count = 0
+    info_value = dict()
+    info("parse article info.file path:%s" % path)
+    with open(path, "r") as article:
+        line = article.readline()
+        line_count = 1
         while line:
-            if pattern_headline.match(line):
-                headline_count += 1
-                # date has to been include between first and second headlines
-                if headline_count >= 2:
+            if pattern_info_head.match(line):
+                info("info table head found")
+                line = article.readline()
+                # effective info table
+                if pattern_info_divide.match(line):
+                    info("info table found")
+                    line = article.readline()
+                    # traverse every info list
+                    while line:
+                        is_supported = False
+                        # query every supported key word
+                        for info_key in patterns_info_supported.keys():
+                            match = patterns_info_supported[info_key].match(line)
+                            if match:
+                                info("key word matched:%s" % info_key)
+                                is_supported = True
+                                info_value[info_key] = match.group(1)
+                                break
+                        # once any unsupported word appears,stop parsing
+                        if is_supported is False:
+                            info("the end of info table")
+                            return info_value
+                        line = article.readline()
+                        if not line:
+                            info("the end of info table because of eof")
+                            return info_value
+                else:
+                    err("bad info table.return")
                     return None
-            match = pattern_date.match(line)
-            if match:
-                date = match.group(1)
-                return date
-            # next line
-            line = main_file.readline()
-        return None
+            else:
+                line_count += 1
+                # info table has to be written in 10 lines
+                if line_count > 10:
+                    err("can't find info table in %d lines." % line_count)
+                    return None
+                line = article.readline()
+    err("can't find any thing")
+    return None
 
 
 def build_summary_category(path):
@@ -141,11 +182,13 @@ def create_article(name, category=None):
     os.mkdir(path_article)
     path_main_md = os.path.join(path_article, "main.md")
     with open(path_main_md, mode="a") as article:
-        article.writelines("# %s\n\n" % name)
-        article.writelines("date:%s\n" % datetime.date.today())
-    info("article %s has been created!" % name)
+        article.writelines("# %s\n\n" % name)                       # headline
+        article.writelines("information | details\n")               # table head
+        article.writelines("------------|--------\n")               # table divide
+        article.writelines("date | %s\n" % datetime.date.today())   # date
     info("path:%s" % path_article)
     info("date:%s" % datetime.date.today())
+    info("article %s has been created!" % name)
 
 
 def on_sub_create(args):
