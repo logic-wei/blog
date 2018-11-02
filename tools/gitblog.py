@@ -98,21 +98,21 @@ def build_summary_category(path):
     :param path: SUMMARY-CATEGORY.md's full name with path
     :return: None
     """
-    categorys_name = []
+    categories_name = []
     articles_name = []
     # classify all files in articles
     for filename in os.listdir(path_articles):
         if is_article(os.path.join(path_articles, filename)):
             articles_name.append(filename)
         else:
-            categorys_name.append(filename)
+            categories_name.append(filename)
     # descending order
-    categorys_name.sort()
+    categories_name.sort()
     articles_name.sort()
     with open(path, mode="w") as summary_file:
         summary_file.writelines("# CATEGORY\n\n")
         # handle every category
-        for category_name in categorys_name:
+        for category_name in categories_name:
             category_path = os.path.join(path_articles, category_name)
             subarticles_name = os.listdir(category_path)
             # descending order

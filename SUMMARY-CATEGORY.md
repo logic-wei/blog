@@ -1,8 +1,5 @@
 # CATEGORY
 
-## cata1
-
-
 ## cata2
 
 - [en](articles/cata2/en/main.md)
@@ -11,25 +8,23 @@
 - [hello3](articles/cata2/hello3/main.md)
 - [hello8](articles/cata2/hello8/main.md)
 
-## cata3
-
-
 ## test
 
 - [test](articles/test/test/main.md)
 - [test2](articles/test/test2/main.md)
+- [娴嬭瘯3](articles/test/娴嬭瘯3/main.md)
 
-## 中文分类
+## 涓枃鍒嗙被
 
-- [中文标题](articles/中文分类/中文标题/main.md)
+- [涓枃鏍囬](articles/涓枃鍒嗙被/涓枃鏍囬/main.md)
 
-## 分类
+## 鍒嗙被
 
-- [文章](articles/分类/文章/main.md)
+- [鏂囩珷](articles/鍒嗙被/鏂囩珷/main.md)
 
-## 分类1
+## 鍒嗙被1
 
-- [文章2](articles/分类1/文章2/main.md)
+- [鏂囩珷2](articles/鍒嗙被1/鏂囩珷2/main.md)
 
 ## undefined
 
