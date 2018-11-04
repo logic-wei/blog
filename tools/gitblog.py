@@ -116,7 +116,7 @@ def build_summary_category(path):
     # descending order
     categories_name.sort()
     articles_name.sort()
-    with open(path, mode="w") as summary_file:
+    with open(path, mode="w", encoding="utf-8") as summary_file:
         summary_file.writelines("# CATEGORY\n\n")
         # handle every category
         for category_name in categories_name:
@@ -188,7 +188,7 @@ def create_article(name, category=None):
     path_article = os.path.join(path_category, name)
     os.mkdir(path_article)
     path_main_md = os.path.join(path_article, "main.md")
-    with open(path_main_md, mode="a") as article:
+    with open(path_main_md, mode="a", encoding="utf-8") as article:
         article.writelines("# %s\n\n" % name)                       # headline
         article.writelines("information | details\n")               # table head
         article.writelines("------------|--------\n")               # table divide
