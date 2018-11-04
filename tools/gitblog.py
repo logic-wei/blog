@@ -28,10 +28,12 @@ def is_article(path):
 # information | details             # head
 # ------------|-----------          # divide
 # date        | 2018-10-27          # date
+# author      | logic               # author
 
 pattern_headline = re.compile(r"^#.*")
 pattern_info_head = re.compile(r"^\s*information\s*\|\s*details\s*$")
 pattern_info_divide = re.compile(r"^\s*-*\s*\|\s*-*\s*$")
+pattern_info_uniform = re.compile(r"^\s*(\S*)\s*\|\s*(\S*)\s*$")
 pattern_info_date = re.compile(r"^\s*date\s*\|\s*(\d*-\d*-\d*)\s*$")
 pattern_info_author = re.compile(r"^\s*author\s*\|\s*(.*)\s*$")
 patterns_info_supported = {
@@ -47,7 +49,7 @@ def get_article_info(path):
     :return: return None or all of the supported info's value named info_value
     """
     info_value = dict()
-    info("parse article info.file path:%s" % path)
+    info("start parsing article info.file path:%s" % path)
     with open(path, "r") as article:
         line = article.readline()
         line_count = 1
@@ -66,14 +68,19 @@ def get_article_info(path):
                         for info_key in patterns_info_supported.keys():
                             match = patterns_info_supported[info_key].match(line)
                             if match:
-                                info("key word matched:%s" % info_key)
+                                info("key word matched:[%s]" % info_key)
                                 is_supported = True
                                 info_value[info_key] = match.group(1)
                                 break
-                        # once any unsupported word appears,stop parsing
+                        # once markdown table finished,stop parsing
                         if is_supported is False:
-                            info("the end of info table")
-                            return info_value
+                            match = pattern_info_uniform.match(line)
+                            if match:
+                                info("unsupported key word:[%s]" % match.group(1))
+                            else:
+                                info("the end of info table")
+                                return info_value
+                        # next line
                         line = article.readline()
                         if not line:
                             info("the end of info table because of eof")
