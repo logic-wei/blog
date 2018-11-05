@@ -19,6 +19,11 @@ def info(msg):
 
 
 def is_article(path):
+    """
+    judge if path is article
+    :param path:full path
+    :return:bool
+    """
     path_main = os.path.join(path, "main.md")
     return os.path.exists(path_main) and os.path.isfile(path_main)
 
@@ -99,6 +104,32 @@ def get_article_info(path):
     return None
 
 
+def get_article_list_recursive(root, article_list=list()):
+    """
+    get article list by given dir tree
+    :param root: the root path of the dir tree
+    :param article_list:a list to save the information of the articles
+    :return: article list witch element is ("article name", "relative path", "article date")
+    """
+    info("article root dir:%s" % root)
+    for filename in os.listdir(root):
+        info("current file:%s" % filename)
+        path_current = os.path.join(root, filename)
+        info("current path:%s" % path_current)
+        if is_article(path_current):
+            path_main_md = os.path.join(path_current, "main.md")
+            article_info = get_article_info(path_main_md)
+            article_list.append((filename, path_current, article_info["date"]))
+        else:
+            get_article_list_recursive(path_current, article_list)
+
+    return article_list
+
+
+def get_article_list():
+    return get_article_list_recursive(path_articles)
+
+
 def build_summary_category(path):
     """
     build SUMMARY-CATEGORY.md at path
@@ -143,7 +174,15 @@ def build_summary_date(path):
     :param path: SUMMARY-DATE.md's full name with path
     :return: None
     """
-    pass
+    article_list = get_article_list()
+    # sort by date
+    article_list.sort(key=lambda item: item[2])
+    with open(path, mode="w", encoding="utf-8") as summary_file:
+        summary_file.writelines("# ALL\n\n")
+        summary_file.writelines("date | title\n")
+        summary_file.writelines("-----|------\n")
+        for item in article_list:
+            summary_file.writelines(""+item[0]+" | "+item[2]+"\n")
 
 
 def build_summary(path):
