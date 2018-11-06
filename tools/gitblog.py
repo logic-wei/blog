@@ -5,6 +5,7 @@ import sys
 import datetime
 import re
 
+
 # cross platform path
 path_root = os.getcwd()
 path_articles = os.path.join(os.getcwd(), "articles")
@@ -109,7 +110,7 @@ def get_article_list_recursive(root, article_list=list()):
     get article list by given dir tree
     :param root: the root path of the dir tree
     :param article_list:a list to save the information of the articles
-    :return: article list witch element is ("article name", "relative path", "article date")
+    :return: article list which element is ("article name", "full path", "article date")
     """
     info("article root dir:%s" % root)
     for filename in os.listdir(root):
@@ -127,7 +128,29 @@ def get_article_list_recursive(root, article_list=list()):
 
 
 def get_article_list():
-    return get_article_list_recursive(path_articles)
+    """
+    get article list from blog/articles/
+    :return: article_list which element is ("article name", "relative path", "article date")
+    """
+    article_list = list()
+    for filename in os.listdir(path_articles):
+        path_current = os.path.join(path_articles, filename)
+        if is_article(path_current):
+            path_main_md = os.path.join(path_current, "main.md")
+            article_info = get_article_info(path_main_md)
+            article_list.append((filename, "./articles/"+filename+"/main.md", article_info["date"]))
+        else:
+            for sub_filename in os.listdir(path_current):
+                sub_path_current = os.path.join(path_current, sub_filename)
+                if is_article(sub_path_current):
+                    path_main_md = os.path.join(sub_path_current, "main.md")
+                    article_info = get_article_info(path_main_md)
+                    article_list.append(
+                        (sub_filename, "./articles/"+filename+"/"+sub_filename+"/main.md", article_info["date"])
+                    )
+                else:
+                    err("illegal path:%s" % sub_path_current)
+    return article_list
 
 
 def build_summary_category(path):
@@ -176,13 +199,13 @@ def build_summary_date(path):
     """
     article_list = get_article_list()
     # sort by date
-    article_list.sort(key=lambda item: item[2])
+    article_list.sort(key=lambda elem: elem[2])
     with open(path, mode="w", encoding="utf-8") as summary_file:
         summary_file.writelines("# ALL\n\n")
         summary_file.writelines("date | title\n")
         summary_file.writelines("-----|------\n")
-        for item in article_list:
-            summary_file.writelines(""+item[0]+" | "+item[2]+"\n")
+        for elem in article_list:
+            summary_file.writelines("["+elem[0]+"]("+elem[1]+") | "+elem[2]+"\n")
 
 
 def build_summary(path):
