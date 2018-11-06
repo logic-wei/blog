@@ -64,7 +64,7 @@ python3 tools/gitblog.py summary
 
 `文章`定义为包含`main.md`的文件夹，为了保持`文章`的独立性，资源文件通通放入这个文件夹内，`文章`可以放在`articles`中，也可以放在`分类`下
 
-```json
+```bash
 [文章名]{
     imgs/
     main.md
@@ -75,7 +75,7 @@ python3 tools/gitblog.py summary
 
 `分类`定义为一个普通文件夹（不包含main.md的文件夹），`文章`可以放入到`分类`中，`分类`不可以嵌套，`分类`只能放在`articles`下
 
-```json
+```bash
 [分类名]{
     [文章名0]{
         imgs/
