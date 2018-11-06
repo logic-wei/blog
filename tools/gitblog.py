@@ -5,6 +5,9 @@ import sys
 import datetime
 import re
 
+# config
+VERSION = "v1.0"
+AUTHOR = "logic wei"
 
 # cross platform path
 path_root = os.getcwd()
@@ -202,7 +205,7 @@ def build_summary_date(path):
     article_list.sort(key=lambda elem: elem[2])
     with open(path, mode="w", encoding="utf-8") as summary_file:
         summary_file.writelines("# ALL\n\n")
-        summary_file.writelines("date | title\n")
+        summary_file.writelines("title | date\n")
         summary_file.writelines("-----|------\n")
         for elem in article_list:
             summary_file.writelines("["+elem[0]+"]("+elem[1]+") | "+elem[2]+"\n")
@@ -281,7 +284,7 @@ def main():
     # top level parser
     mainparser.add_argument("-v", "--version",
                             action="version",
-                            version="none")
+                            version="gitblog "+VERSION+" written by "+AUTHOR)
     mainparser.set_defaults(func=on_main)
     # sub parser for create
     subparser_create = subparsers.add_parser("create",
@@ -293,6 +296,7 @@ def main():
     subparser_create.set_defaults(func=on_sub_create)
     # sub parser for summary
     subparser_summary = subparsers.add_parser("summary", help="build summary")
+    # NOTE:there's some problem here,but I don't want to fix it :)
     subparser_summary.add_argument("-d", "--directory",
                                    help="specify a directory to save summary")
     subparser_summary.set_defaults(func=on_sub_summary)

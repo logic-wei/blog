@@ -1,5 +1,5 @@
-# test
+# example2
 
 information | details
 ------------|--------
-date | 2018-11-04
+date | 2018-11-06
