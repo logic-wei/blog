@@ -87,3 +87,24 @@ python3 tools/gitblog.py summary
     }
 }
 ```
+
+## 文章内容规范
+
+规定文章开始部分由大标题和文章信息表组成，往后才是文章随意发挥的部分，例如：
+
+```markdown
+# 文章标题
+
+information | details
+------------|--------
+date | 2018-11-06
+author | 张三
+other key words | XXX
+
+正文
+```
+
+文章信息表现在支持以下关键字，如有必要，后续会加以补充:
+
+- date：日期
+- author：作者
